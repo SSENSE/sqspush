@@ -1,5 +1,7 @@
 # SQS Push
 
+[![Build Status](https://travis-ci.org/MathieuDoyon/sqspush.svg?branch=master)](https://travis-ci.org/MathieuDoyon/sqspush)
+
 simple cli command that push STDIN to your AWS SQS queue
 
 ---
