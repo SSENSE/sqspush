@@ -3,6 +3,19 @@
 simple cli command that push STDIN to your AWS SQS queue
 
 ---
+## Install
+[Binary packages](https://github.com/MathieuDoyon/sqspush/releases) are available for Mac, Linux and Windows.
+
+To build from source you can:
+
+1. Clone this repository into `$GOPATH/src/github.com/MathieuDoyon/sqspush` and
+   change directory into it
+2. Run `make build`
+
+This will leave you with `./sqspush`, which you can put in your `$PATH` if
+you'd like. (You can also take a look at `make install` to install for
+you.)
+
 
 ## Usage
 
@@ -53,3 +66,7 @@ or use SQS PUSH login command to create your `~/.aws/credentials`
 # login to AWS will create or overwrite ~/.aws/credentials file
 sqspush login --key=aws_access_key_id --secret=aws_secret_access_key
 ```
+
+### LICENSE
+
+This package is made available under an MIT-style license. See LICENSE.txt.
