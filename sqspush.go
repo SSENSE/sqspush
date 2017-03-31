@@ -46,7 +46,7 @@ func main() {
 	}
 
 	app := cli.NewApp()
-	app.Version = "0.2.0"
+	app.Version = "0.2.1"
 	app.Name = "SQS PUSH"
 	app.Usage = "push stdin into sqs queue"
 	app.Flags = []cli.Flag{
@@ -85,9 +85,8 @@ func main() {
 			panic(err)
 		}
 		if fi.Mode()&os.ModeNamedPipe == 0 {
-			fmt.Println("no pipe :(")
+			cli.ShowAppHelp(c)
 		} else {
-			// fmt.Println("hi pipe!")
 			payload := ""
 			s := bufio.NewScanner(os.Stdin)
 			for s.Scan() {
