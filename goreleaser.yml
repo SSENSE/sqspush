@@ -1,0 +1,22 @@
+build:
+  binary: sqspush
+  ldflags: -s -w -X main.version={{.Version}}
+  goos:
+    - windows
+    - darwin
+    - linux
+  goarch:
+    - amd64
+# Archive customization
+archive:
+  format: tar.gz
+  format_overrides:
+    - goos: windows
+      format: zip
+  replacements:
+    amd64: 64-bit
+    darwin: macOS
+    linux: Tux
+  files:
+    - LICENSE
+    - README.md
