@@ -11,8 +11,8 @@ install:
 - glide install
 script:
 - make integration-test
-after_success: ls -l; git status -s;
-# after_success: test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
-# env:
-#   global:
-#     secure: o8PQVjG6nNkP7qBShKErZLo8w4X7xUer+bi9qThRmRNqxIlix2tBsS9mvcth8IhAY7XCewLyTJWxOgqKGyv4lBFHIhj6vNY8tM+RWi1AnnAJedeJrEGASSihnbwTus3VUiT/99jIQwRHlabMLMwqje3NJSF3JaKdUza6wOABFQ+7K3lxLgQPB5Xhw4bQqkISVnuwd15gei/0OpYQIEJsVFTRNoXTkeuK76ftSHbgfx1Gm/cR49RfdHjHEKKFFMyu7i58nm3KVyalr5Sot+i33S4AEjJkjuyGwjYyc+euIPn/TTRJokv4H0228uqOqBcNyFBpwwG+5w9wmymC6Mtx74Uy532APCAsvIA4bjy0nQ1C8fZ9dQXj2lYp3t9rHTNKp1exstWxk/xoetjjqsE7gwwS+mScznW1wu5UrqZOXVW418utry9EZr2+jU9x+658Vztd+ypQ/Pzv3OOT3m/Rc0Qq40bmSv5g8WN6LB7JpV/ABcGWA6SCGzQpSIKKc2mZYF4L8W+uEODqJqseqVv1wtuWqXCfdLnmNRd0L4EhyKfcPQ/m16rsiEl6YqR7ae+8+3+db60NlmUwCcVF8gKG/DKlpp6s3P+fLXN208KqPKV8xUrtsvKoCYqdmAjPm1HBB8NwOtpFOChHqq6K4+kpvMwxGhL5SQQSQe/WlllBqkQ=
+# after_success: ls -l; git status -s;
+after_success: test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
+env:
+  global:
+    secure: o8PQVjG6nNkP7qBShKErZLo8w4X7xUer+bi9qThRmRNqxIlix2tBsS9mvcth8IhAY7XCewLyTJWxOgqKGyv4lBFHIhj6vNY8tM+RWi1AnnAJedeJrEGASSihnbwTus3VUiT/99jIQwRHlabMLMwqje3NJSF3JaKdUza6wOABFQ+7K3lxLgQPB5Xhw4bQqkISVnuwd15gei/0OpYQIEJsVFTRNoXTkeuK76ftSHbgfx1Gm/cR49RfdHjHEKKFFMyu7i58nm3KVyalr5Sot+i33S4AEjJkjuyGwjYyc+euIPn/TTRJokv4H0228uqOqBcNyFBpwwG+5w9wmymC6Mtx74Uy532APCAsvIA4bjy0nQ1C8fZ9dQXj2lYp3t9rHTNKp1exstWxk/xoetjjqsE7gwwS+mScznW1wu5UrqZOXVW418utry9EZr2+jU9x+658Vztd+ypQ/Pzv3OOT3m/Rc0Qq40bmSv5g8WN6LB7JpV/ABcGWA6SCGzQpSIKKc2mZYF4L8W+uEODqJqseqVv1wtuWqXCfdLnmNRd0L4EhyKfcPQ/m16rsiEl6YqR7ae+8+3+db60NlmUwCcVF8gKG/DKlpp6s3P+fLXN208KqPKV8xUrtsvKoCYqdmAjPm1HBB8NwOtpFOChHqq6K4+kpvMwxGhL5SQQSQe/WlllBqkQ=
