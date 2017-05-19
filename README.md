@@ -1,16 +1,16 @@
 # SQS Push
 
-[![Build Status](https://travis-ci.org/MathieuDoyon/sqspush.svg?branch=master)](https://travis-ci.org/MathieuDoyon/sqspush)
+[![Build Status](https://travis-ci.org/SSENSE/sqspush.svg?branch=master)](https://travis-ci.org/SSENSE/sqspush)
 
 simple cli command that push STDIN to your AWS SQS queue
 
 ---
 ## Install
-[Binary packages](https://github.com/MathieuDoyon/sqspush/releases) are available for Mac, Linux and Windows.
+[Binary packages](https://github.com/SSENSE/sqspush/releases) are available for Mac, Linux and Windows.
 
 To build from source you can:
 
-1. Clone this repository into `$GOPATH/src/github.com/MathieuDoyon/sqspush` and
+1. Clone this repository into `$GOPATH/src/github.com/SSENSE/sqspush` and
    change directory into it
 2. Run `make build`
 
