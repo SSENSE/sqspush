@@ -6,10 +6,12 @@ install:
 - wget "https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz"
 - mkdir -p $HOME/bin
 - tar -vxz -C $HOME/bin --strip=1 -f glide-v0.12.3-linux-amd64.tar.gz
+- rm -f glide-v0.12.3-linux-amd64.tar.gz
 - export PATH="$HOME/bin:$PATH"
 - glide install
 script:
 - make integration-test
+after_success: ls -l; git status -s;
 # after_success: test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
 # env:
 #   global:
